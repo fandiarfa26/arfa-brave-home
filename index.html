@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>~/home</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <main class="frame">
+    <header class="titlebar">
+      <h1 class="cwd">~/home</h1>
+    </header>
+
+    <div class="content">
+      <section class="block">
+        <div class="cmd"><span class="prompt" aria-hidden="true">$</span> fetch</div>
+        <div class="fetch">
+          <pre class="ascii" id="ascii" aria-hidden="true"></pre>
+          <div class="out ff-info">
+            <div class="ff-row"><span class="ff-key">user</span><span class="ff-val" id="ff-user"></span></div>
+            <div class="ff-row"><span class="ff-key">os</span><span class="ff-val" id="ff-os"></span></div>
+            <div class="ff-row"><span class="ff-key">de/wm</span><span class="ff-val" id="ff-dewm"></span></div>
+            <div class="ff-row"><span class="ff-key">font</span><span class="ff-val" id="ff-font"></span></div>
+            <div class="ff-row"><span class="ff-key">uptime</span><span class="ff-val" id="ff-uptime"></span></div>
+            <div class="ff-row"><span class="ff-key">browser</span><span class="ff-val" id="ff-browser"></span></div>
+            <div class="ff-row"><span class="ff-key">datetime</span><span class="ff-val" id="ff-datetime"></span></div>
+            <div class="ff-row"><span class="ff-key">local ip</span><span class="ff-val" id="ff-ip"></span></div>
+            <div class="ff-row"><span class="ff-key">colors</span><span class="ff-val ff-colors" id="ff-colors"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="cmd"><span class="prompt" aria-hidden="true">$</span> ls <span class="path">~/links</span></div>
+        <nav class="links" id="links" aria-label="Recent links"></nav>
+      </section>
+
+      <section class="block">
+        <div class="cmd"><span class="prompt" aria-hidden="true">$</span> search</div>
+        <form class="search" id="search-form" role="search">
+          <span class="prompt search-prompt" aria-hidden="true">&gt;</span>
+          <label class="visually-hidden" for="search-input">Search the web</label>
+          <input
+            id="search-input"
+            type="search"
+            name="q"
+            placeholder=""
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          >
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

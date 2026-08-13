@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Arfabuma New Tab",
+  "version": "1.0.0",
+  "description": "Minimal terminal-inspired Brave New Tab",
+  "permissions": ["history"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
