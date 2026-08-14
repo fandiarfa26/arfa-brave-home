@@ -14,10 +14,6 @@ const DE_WM = "Niri";
 // Terminal font shown by `$ fetch`; the page renders in this family.
 const FONT = "JetBrainsMono Nerd Font";
 
-// Uptime shown by `$ fetch`. Browsers can't read the system uptime, so set it
-// manually (like OS / DE_WM); run `uptime -p` to refresh it.
-const UPTIME = "8 hours, 10 minutes";
-
 // Local IP shown by `$ fetch`. Detected dynamically via WebRTC when the browser
 // exposes it; set this value to force a fallback, leave "" to auto-detect.
 // (Brave obfuscates local IPs with mDNS by default, so dynamic detection may
@@ -157,7 +153,6 @@ async function renderFastfetch() {
   $("ff-os").textContent = OS;
   $("ff-dewm").textContent = DE_WM;
   $("ff-font").textContent = FONT;
-  $("ff-uptime").textContent = UPTIME;
   $("ff-browser").textContent = await detectBrowser();
   $("ff-ip").textContent = (await detectLocalIP()) || LOCAL_IP || "\u2014";
   renderColors();
