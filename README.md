@@ -1,7 +1,7 @@
 # Arfabuma New Tab
 
 A minimal, terminal-inspired New Tab page for Brave Browser. Vanilla HTML/CSS/JS,
-no dependencies, works fully offline. Built on the Eldritch dark palette.
+no dependencies, works fully offline. Built on the Catppuccin Mocha palette.
 
 ## Install
 
@@ -18,7 +18,7 @@ permission (used to list your recent links).
 ```
 ├── manifest.json   MV3 manifest, overrides the New Tab page (history permission)
 ├── index.html      Terminal session markup
-├── style.css       Eldritch palette + terminal UI
+├── style.css       Catppuccin Mocha palette + terminal UI
 ├── script.js       Clock, search, recent links, keyboard shortcuts
 └── README.md
 ```

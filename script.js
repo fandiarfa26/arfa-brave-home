@@ -6,10 +6,10 @@
 const USER = "arfabuma";
 
 // OS shown by `$ fastfetch`.
-const OS = "Arch Linux";
+const OS = "Fedora Linux 44";
 
 // Desktop environment / window manager shown by `$ fastfetch`.
-const DE_WM = "Niri";
+const DE_WM = "Sway (Wayland)";
 
 // Terminal font shown by `$ fetch`; the page renders in this family.
 const FONT = "JetBrainsMono Nerd Font";
@@ -20,10 +20,10 @@ const FONT = "JetBrainsMono Nerd Font";
 //  return nothing unless WebRTC handling is set to "Default" in brave://settings.)
 const LOCAL_IP = "";
 
-// ANSI colors shown by `$ fetch` (Eldritch Abyss tones).
+// ANSI colors shown by `$ fetch` (Catppuccin Mocha).
 const COLORS = [
-  "#252738", "#cc5860", "#2dcc82", "#ccd663",
-  "#506299", "#d154a1", "#0396b3", "#d8e6e6",
+  "#45475a", "#f38ba8", "#a6e3a1", "#f9e2af",
+  "#89b4fa", "#cba6f7", "#89dceb", "#bac2de",
 ];
 
 // ASCII art shown beside the `$ fetch` info (from ASCII-ART.md).

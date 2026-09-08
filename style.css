@@ -1,13 +1,13 @@
-/* Eldritch-inspired palette (Abyss variant) */
+/* Catppuccin Mocha */
 :root {
-  --bg: #171928;            /* void black */
-  --bg-elev: #1d1f31;       /* deep sea grey (frame) */
-  --bg-hover: #252738;      /* benthic surface */
-  --border: #353746;        /* benthic surface border */
-  --fg: #d8e6e6;            /* pale specter */
-  --fg-muted: #9a9db1;      /* desaturated blue-grey, muted text */
-  --green: #2dcc82;         /* phosphor green: command prompts */
-  --cyan: #04d1f9;          /* watery tomb blue: interactive accents */
+  --bg: #11111b;            /* crust */
+  --bg-elev: #1e1e2e;       /* base (frame) */
+  --bg-hover: #313244;      /* surface0 */
+  --border: #45475a;        /* surface1 */
+  --fg: #cdd6f4;            /* text */
+  --fg-muted: #a6adc8;      /* subtext0, muted text */
+  --green: #a6e3a1;         /* green: command prompts */
+  --cyan: #cba6f7;          /* mauve: interactive accents */
 
   --font: "JetBrainsMono Nerd Font", "JetBrains Mono", "Fira Code",
           ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
@@ -37,7 +37,7 @@ body {
 }
 
 ::selection {
-  background: rgba(45, 204, 130, 0.28);
+  background: rgba(203, 166, 247, 0.28);
 }
 
 .visually-hidden {
