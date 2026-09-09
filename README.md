@@ -3,6 +3,8 @@
 A minimal, terminal-inspired New Tab page for Brave Browser. Vanilla HTML/CSS/JS,
 no dependencies, works fully offline. Built on the Catppuccin Mocha palette.
 
+![Arfabuma New Tab demo](demo.gif)
+
 ## Features
 
 - `$ fetch` block: user, OS, DE/WM, font, browser, live clock, local IP, palette
