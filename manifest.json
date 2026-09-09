@@ -3,7 +3,7 @@
   "name": "Arfabuma New Tab",
   "version": "1.0.0",
   "description": "Minimal terminal-inspired Brave New Tab",
-  "permissions": ["history"],
+  "permissions": ["history", "search"],
   "chrome_url_overrides": {
     "newtab": "index.html"
   }

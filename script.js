@@ -42,7 +42,10 @@ const ASCII_ART = `⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣿⣿⣿⣿⣿⣿⣿�
 ⠀⠀⠀⠀⠀⠸⠿⠿⠀⠀⠀⠸⠿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`;
 
-// Search engine URL. The query is appended URL-encoded after this string.
+// Fallback search engine URL, only used when `chrome.search` API is unavailable
+// (e.g. page opened directly as file:// for development). In the extension,
+// search uses the browser's default search engine via `chrome.search.query()`.
+// The query is appended URL-encoded after this string.
 const SEARCH_URL = "https://www.google.com/search?q=";
 
 // Default links shown when browsing history is unavailable or empty.
@@ -242,7 +245,12 @@ form.addEventListener("submit", (event) => {
     input.focus();
     return;
   }
-  window.location.href = SEARCH_URL + encodeURIComponent(query);
+  // Use the browser's default search engine when running as extension.
+  if (chrome?.search?.query) {
+    chrome.search.query({ text: query, disposition: "CURRENT_TAB" });
+  } else {
+    window.location.href = SEARCH_URL + encodeURIComponent(query);
+  }
 });
 
 document.addEventListener("keydown", (event) => {
